@@ -1,0 +1,11 @@
+{
+  "name": "hexo-image-alias",
+  "version": "1.0.0",
+  "description": "Yet another image assets solution for Hexo",
+  "main": "index.js",
+  "author": "Mufanc",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10"
+  }
+}
