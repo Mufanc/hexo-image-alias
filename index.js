@@ -3,6 +3,11 @@ const cheerio = require('cheerio')
 hexo.extend.filter.register('after_post_render', function (data) {
     let config = hexo.config
     if (config.post_asset_folder) {
+        
+        if (!data.permalink.match(/.*(?:\.html|\/)$/)) {
+            return;
+        }
+
         let $ = cheerio.load(data.content)
         $('img').each(function(){
             let src = $(this).attr('src').replace('\\', '/')
